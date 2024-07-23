@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9D5FE233-4ECC-48AC-855E-E2F629C4A712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCBPruebaInversiones.EntidadesODB", "src\HCBPruebaInversiones.EntidadesODB\HCBPruebaInversiones.EntidadesODB.csproj", "{79657147-BEB0-488B-9A09-7A60979894E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCBPruebaInversiones.Negocio", "src\HCBPruebaInversiones.Negocio\HCBPruebaInversiones.Negocio.csproj", "{8341442D-15CA-48E1-94C8-4792310F9740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCBPruebaInversiones.AccesoDatos", "src\HCBPruebaInversiones.AccesoDatos\HCBPruebaInversiones.AccesoDatos.csproj", "{9F8F7776-284D-4BE5-B89F-1BACB76F45CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCBPruebaInversiones", "src\HCBPruebaInversiones\HCBPruebaInversiones.csproj", "{2F6DBE8E-60BE-49E1-A14B-95CEC28886A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCBPruebaInversiones.Api", "src\HCBPruebaInversiones.Api\HCBPruebaInversiones.Api.csproj", "{FBBBC1E3-7B93-47E5-9469-DF172A2C7E19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{F3884E99-B4A2-4493-AC9D-521E58F22CBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79657147-BEB0-488B-9A09-7A60979894E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79657147-BEB0-488B-9A09-7A60979894E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79657147-BEB0-488B-9A09-7A60979894E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79657147-BEB0-488B-9A09-7A60979894E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8341442D-15CA-48E1-94C8-4792310F9740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8341442D-15CA-48E1-94C8-4792310F9740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8341442D-15CA-48E1-94C8-4792310F9740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8341442D-15CA-48E1-94C8-4792310F9740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8F7776-284D-4BE5-B89F-1BACB76F45CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8F7776-284D-4BE5-B89F-1BACB76F45CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8F7776-284D-4BE5-B89F-1BACB76F45CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8F7776-284D-4BE5-B89F-1BACB76F45CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6DBE8E-60BE-49E1-A14B-95CEC28886A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6DBE8E-60BE-49E1-A14B-95CEC28886A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6DBE8E-60BE-49E1-A14B-95CEC28886A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6DBE8E-60BE-49E1-A14B-95CEC28886A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBBC1E3-7B93-47E5-9469-DF172A2C7E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBBC1E3-7B93-47E5-9469-DF172A2C7E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBBC1E3-7B93-47E5-9469-DF172A2C7E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBBC1E3-7B93-47E5-9469-DF172A2C7E19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79657147-BEB0-488B-9A09-7A60979894E6} = {9D5FE233-4ECC-48AC-855E-E2F629C4A712}
+		{8341442D-15CA-48E1-94C8-4792310F9740} = {9D5FE233-4ECC-48AC-855E-E2F629C4A712}
+		{9F8F7776-284D-4BE5-B89F-1BACB76F45CC} = {9D5FE233-4ECC-48AC-855E-E2F629C4A712}
+		{2F6DBE8E-60BE-49E1-A14B-95CEC28886A7} = {F3884E99-B4A2-4493-AC9D-521E58F22CBA}
+		{FBBBC1E3-7B93-47E5-9469-DF172A2C7E19} = {F3884E99-B4A2-4493-AC9D-521E58F22CBA}
+		{F3884E99-B4A2-4493-AC9D-521E58F22CBA} = {9D5FE233-4ECC-48AC-855E-E2F629C4A712}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4193C88F-FCB4-464A-8881-DE00939FBE04}
+	EndGlobalSection
+EndGlobal
