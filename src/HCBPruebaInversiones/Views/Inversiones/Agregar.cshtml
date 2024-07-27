@@ -1,0 +1,45 @@
+﻿@model HCBPruebaInversiones.EntidadesODB.Request.AgregarInversionRequest
+
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<h1>Agregar</h1>
+
+<h4>AgregarInversionRequest</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AgregarInversion">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MontoInversion" class="control-label"></label>
+                <input asp-for="MontoInversion" class="form-control" />
+                <span asp-validation-for="MontoInversion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TasaInteres" class="control-label"></label>
+                <input asp-for="TasaInteres" class="form-control" />
+                <span asp-validation-for="TasaInteres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlazoMeses" class="control-label"></label>
+                <input asp-for="PlazoMeses" class="form-control" />
+                <span asp-validation-for="PlazoMeses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CuponesAnuales" class="control-label"></label>
+                <input asp-for="CuponesAnuales" class="form-control" />
+                <span asp-validation-for="CuponesAnuales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

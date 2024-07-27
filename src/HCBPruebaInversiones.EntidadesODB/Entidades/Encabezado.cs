@@ -12,7 +12,7 @@ namespace HCBPruebaInversiones.EntidadesODB.Entidades
 
         public int ID_INVERSION { get; set; }
         public decimal TOTAL_INTERES { get; set; }
-        public double SALDO_CAPITALIZADO { get; set; }
+        public decimal SALDO_CAPITALIZADO { get; set; }
 
     }
 }

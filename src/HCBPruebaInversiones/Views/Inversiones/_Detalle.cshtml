@@ -1,0 +1,58 @@
+﻿@model HCBPruebaInversiones.EntidadesODB.Request.InversioneConDetallesVM
+
+
+<h1>Detalles</h1>
+
+    <table id="tablaEncavezados" >
+      <thead>
+        <tr>
+            <th>Total intereses ganados</th>
+            <th>Saldo final capitalizado</th>
+        </tr>
+       </thead>
+      <tbody>
+          <tr>
+            <td> @Model.Encabezado.InteresTotalc </td>
+            <td> @Model.Encabezado.SaldoCapitalizado </td>
+          </tr>
+      </tbody>
+   </table>
+
+
+    <table id="tablaDetalles" >
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Cupon</th>
+                <th>Saldo Inversion</th>
+                <th>Intereses Ganados</th>
+                <th>Saldo Capitalizado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Detalles) {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Año)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cupon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InteresesGanados)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaldoCapitalizado)
+                </td>
+
+        </tr>
+            }
+        </tbody>
+    </table>
+
+
+    

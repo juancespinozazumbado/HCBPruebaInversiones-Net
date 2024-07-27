@@ -1,0 +1,58 @@
+﻿@model List<HCBPruebaInversiones.EntidadesODB.Request.InversioneConDetallesVM>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Agregar">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+          
+            <th>
+                Monto de la inversiuon
+            </th>
+            <th>
+               Tasa interes
+            </th>
+            <th>
+                Plazo
+            </th>
+            <th>
+               Cuponse por Año
+            </th>
+            <th>
+                Acciones
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Inversion.MONTO_INVERSION)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Inversion.TAS_INT_ANUAL)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Inversion.PLAZO_MESES)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Inversion.CUPONES_POR_AÑO)
+            </td>
+            <td>
+                    @Html.ActionLink("detalles", "Inversion", new { id = item.Inversion.ID_INVERSION }) @* | *@
+              @*   @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

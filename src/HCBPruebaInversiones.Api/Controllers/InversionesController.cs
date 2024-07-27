@@ -21,13 +21,21 @@ namespace HCBPruebaInversiones.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Inversion>> Get()
+        public ActionResult<IEnumerable<ListarInversionesResponse>> Get()
         {
             try
             {
                 var inversiones = _repositorio.ListarInversiones();
                
-                return Ok(inversiones);
+                return Ok(inversiones.Select( inversion => new ListarInversionesResponse
+                {
+                    IdInversion = inversion.ID_INVERSION, 
+                    MontoInversion = (int)inversion.MONTO_INVERSION,
+                    TasaInteres = inversion.TAS_INT_ANUAL,
+                    PlazoMeses = inversion.PLAZO_MESES, 
+                    CuponesAnuales = inversion.CUPONES_POR_AÑO
+
+                }));
 
             }
             catch (Exception ex)
@@ -39,13 +47,23 @@ namespace HCBPruebaInversiones.Api.Controllers
         }
 
         [HttpGet("{id}/detalles")]
-        public ActionResult<IEnumerable<DetalleInversion>> ListarDetalles(int id)
+        public ActionResult<IEnumerable<ListarDetallesResponse>> ListarDetalles(int id)
         {
             try
             {
                 var detalles = _repositorio.ListarDetalles( new Inversion { ID_INVERSION = id});
 
-                return Ok(detalles);
+                return Ok(detalles.Select(detalle => new ListarDetallesResponse
+                {
+                    Id = detalle.ID_DETALLE,
+                    IdInversion = detalle.ID_INVERSION, 
+                    Año = detalle.AÑO, 
+                    Cupon = detalle.CUPON, 
+                    Saldo = (int)detalle.SALDO_INVERSION,
+                    InteresesGanados = detalle.INTERES_GANADO,
+                    SaldoCapitalizado = (int )detalle.SALDO_CAPITALIZADO
+
+                }));
 
             }
             catch (Exception ex)
@@ -63,7 +81,13 @@ namespace HCBPruebaInversiones.Api.Controllers
             {
                 var detalles = _repositorio.ListarEncabezados(new Inversion { ID_INVERSION = id });
 
-                return Ok(detalles);
+                return Ok(detalles.Select( e => new EncabezadoResponse
+                {
+                    IdEncabezado = e.ID_ENCABEZADO, 
+                    IdInversion = e.ID_INVERSION, 
+                    InteresTotalc = e.TOTAL_INTERES, 
+                    SaldoCapitalizado = e.SALDO_CAPITALIZADO
+                }));
 
             }
             catch (Exception ex)
@@ -97,8 +121,8 @@ namespace HCBPruebaInversiones.Api.Controllers
 
 
 
-        [HttpPost("/encabezados")]
-        public ActionResult<IEnumerable<Encabezado>> IniciarEncabezados([FromBody] AgregarEncabezadosRequest encabezado)
+        [HttpPost("encabezados")]
+        public ActionResult<string> IniciarEncabezados([FromBody] AgregarEncabezadosRequest encabezado)
         {
             try
             {

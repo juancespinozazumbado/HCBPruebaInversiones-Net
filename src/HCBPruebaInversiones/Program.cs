@@ -1,7 +1,19 @@
+using HCBPruebaInversiones.Negocio.Servicios;
+using HCBPruebaInversiones.Services.Inversiones;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddHttpClient();
+builder.Services.AddTransient<IservicioDeInversiones, ServicioDeInversiones>();
+
+builder.Services.AddControllersWithViews().AddJsonOptions(opts =>
+{
+    opts.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+}); 
+
 
 var app = builder.Build();
 
