@@ -8,11 +8,13 @@ namespace HCBPruebaInversiones.EntidadesODB.Entidades
 {
     public class DetalleInversion
     {
-        public int Id { get; set; }
-        public int Año { get; set; }
-        public decimal SaldoInversion { get; set; }
-        public decimal InteresesGanados { get; set; }
-        public decimal SaldoCapitalizado { get; set; }
+        public int ID_DETALLE { get; set; }
+        public int ID_INVERSION { get; set; }
+        public int AÑO { get; set; }
+        public int CUPON { get; set; }
+        public decimal SALDO_INVERSION { get; set; }
+        public decimal INTERES_GANADO { get; set; }
+        public decimal SALDO_CAPITALIZADO { get; set; }
 
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HCBPruebaInversiones.AccesoDatos.Repositorio;
+﻿using HCBPruebaInversiones.AccesoDatos.Repositorio;
 using HCBPruebaInversiones.Negocio.Inversiones;
 using Microsoft.Extensions.DependencyInjection;
 
