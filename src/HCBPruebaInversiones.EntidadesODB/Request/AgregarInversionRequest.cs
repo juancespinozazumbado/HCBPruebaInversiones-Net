@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -15,6 +16,8 @@ namespace HCBPruebaInversiones.EntidadesODB.Request
         [JsonPropertyName("TasaInteres")]
         public double TasaInteres { get; set; }
 
+        //[Required]
+       //  [Range(0.0, Double.MaxValue, ErrorMessage = "Please enter a valid double value.")]
         [JsonPropertyName("PlazoMeses")]
         public int PlazoMeses { get; set; }
 

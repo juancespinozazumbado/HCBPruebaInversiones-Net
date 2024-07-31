@@ -169,7 +169,7 @@ namespace HCBPruebaInversiones.Services.Inversiones
                     ID_INVERSION = inversion.IdInversion, 
                     MONTO_INVERSION = inversion.MontoInversion, 
                     PLAZO_MESES = inversion.PlazoMeses, 
-                    TAS_INT_ANUAL = inversion.TasaInteres,
+                    TASA_INT_ANUAL = inversion.TasaInteres,
                     CUPONES_POR_AÑO = inversion.CuponesAnuales
                 });
 
