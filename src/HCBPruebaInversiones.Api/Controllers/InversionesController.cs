@@ -31,7 +31,7 @@ namespace HCBPruebaInversiones.Api.Controllers
                 {
                     IdInversion = inversion.ID_INVERSION, 
                     MontoInversion = (int)inversion.MONTO_INVERSION,
-                    TasaInteres = inversion.TAS_INT_ANUAL,
+                    TasaInteres = inversion.TASA_INT_ANUAL,
                     PlazoMeses = inversion.PLAZO_MESES, 
                     CuponesAnuales = inversion.CUPONES_POR_AÑO
 
@@ -81,13 +81,14 @@ namespace HCBPruebaInversiones.Api.Controllers
             {
                 var detalles = _repositorio.ListarEncabezados(new Inversion { ID_INVERSION = id });
 
-                return Ok(detalles.Select( e => new EncabezadoResponse
+                var encabezados = detalles.Select(e => new EncabezadoResponse
                 {
-                    IdEncabezado = e.ID_ENCABEZADO, 
-                    IdInversion = e.ID_INVERSION, 
-                    InteresTotalc = e.TOTAL_INTERES, 
+                    IdEncabezado = e.ID_ENCABEZADO,
+                    IdInversion = e.ID_INVERSION,
+                    InteresTotalc = e.TOTAL_INTERES,
                     SaldoCapitalizado = e.SALDO_CAPITALIZADO
-                }));
+                });
+                return Ok(encabezados);
 
             }
             catch (Exception ex)
